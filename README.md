@@ -6,18 +6,20 @@
 
 ## Introduction
 
-In the following code, we perform a similar task multiple times. When we find
-ourselves writing the same code over and over multiple times, we can "name"
-that behavior by putting the code into a subroutine.
+In the following code, we perform a similar task multiple times. We repeat
+ourselves. When we do this, we increase the chance that we'll make a subtle
+error in one of the repetitions.  When developers see repeated behavior 
+in code, they "name" that behavior by putting the code into a subroutine.
+This pattern has a fun abbreviation: Don't Repeat Yourself (DRY).
 
-Doing so makes that repeated code:
+"DRY" code is:
 
 * **Easier to fix**: if it's broken for one it's broken for all; if it's fixed for
   one, it fixes all
 * **More visible**: Naming processes is important and subroutines help you understand what's
   important to your code. Naming things is a powerful magical act.
 * **Less Distracting**: Parent code that uses the subroutine won't have its
-  purpose muddled
+  purpose muddled by repeated and similar bits of action
 
 We'll see all these benefits as we "DRY out" some sandwich-making code.
 
