@@ -64,14 +64,18 @@ end
 make_pbj_sandwich(demo_loaf, "crunchy monkey brand peanut butter", "Belgian forest-berry", 2)
 ```
 
-In the code above, 6/7 of the lines are about joining ingredients together and
-outputting what they were. They're all more-or-less identical. Let's extract
-that behavior to a subroutine and "DRY" out the code.
+In the code above, look at the implementation of `make_pbj_sandwich`.
 
-Let's update this implementation so that we "join" ingredients in a subroutine.
-We want to `puts` out what we've joined (as we do currently) and return the
-`String` of `ingredient1 and ingredient2`. Try writing it out yourself on a
-piece of paper or in a new editor window.
+In this method, 6/7 of the lines are about joining ingredients together and
+outputting what they were. They're all more-or-less identical. Let's extract
+that behavior to a subroutine and "DRY" out `make_pbj_sandwich`.
+
+In the subroutine, we want to 
+
+* `puts` what we've joined (as we do currently)
+* return the `String` of `ingredient1 and ingredient2`
+
+Try writing it out yourself on a piece of paper or in a new editor window.
 
 We'll wait :)
 
@@ -81,7 +85,7 @@ No peeking!
 
 ## DRYing out the Code
 
-Back already? Great. We thought we could make the code simpler by writing this
+Back already? Great. We think we can make the code simpler by writing this
 method called `join_ingredients`.
 
 ```ruby
@@ -92,9 +96,7 @@ end
 ```
 
 This method captures the behavior that's repeated 6 times in the
-`make_pbj_sandwich` method.
-
-With this our implementation can become even clearer:
+`make_pbj_sandwich` method. Our implementation becomes even clearer:
 
 ```ruby
 def make_pbj_sandwich(loaf, peanut_butter, jelly, slice_width)
